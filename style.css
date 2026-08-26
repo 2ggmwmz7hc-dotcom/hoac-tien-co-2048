@@ -191,40 +191,83 @@ h1 {
   animation: mergePop .22s cubic-bezier(.2,.8,.2,1.15);
 }
 
-/* Glow progression */
+/* Glow progression - boosted */
+
+.tile.v64 {
+
+  box-shadow:
+
+    0 0 10px rgba(255, 220, 150, .28),
+
+    0 0 20px rgba(222, 170, 85, .14);
+
+}
+
 .tile.v128 {
-  box-shadow: 0 0 12px rgba(226, 205, 161, .18);
+
+  box-shadow:
+
+    0 0 14px rgba(255, 226, 163, .42),
+
+    0 0 28px rgba(230, 179, 88, .22),
+
+    0 0 42px rgba(183, 120, 42, .12);
+
 }
 
 .tile.v256 {
+
   box-shadow:
-    0 0 14px rgba(231, 200, 132, .26),
-    0 0 28px rgba(205, 158, 78, .12);
+
+    0 0 18px rgba(255, 229, 165, .56),
+
+    0 0 36px rgba(238, 183, 82, .30),
+
+    0 0 56px rgba(198, 120, 38, .18);
+
 }
 
 .tile.v512 {
+
   box-shadow:
-    0 0 16px rgba(242, 197, 107, .34),
-    0 0 34px rgba(212, 140, 48, .18);
+
+    0 0 22px rgba(255, 226, 145, .72),
+
+    0 0 44px rgba(245, 171, 58, .42),
+
+    0 0 68px rgba(210, 113, 31, .24);
+
 }
 
 .tile.v1024 {
+
   box-shadow:
-    0 0 18px rgba(255, 219, 144, .45),
-    0 0 38px rgba(226, 161, 70, .24),
-    0 0 58px rgba(192, 113, 42, .12);
+
+    0 0 28px rgba(255, 234, 170, .88),
+
+    0 0 56px rgba(255, 192, 78, .52),
+
+    0 0 84px rgba(218, 116, 30, .30);
+
 }
 
 .tile.v2048 {
+
   z-index: 5;
-  border-color: rgba(255, 231, 171, .75);
-  animation: haloPulse 2.4s ease-in-out infinite;
+
+  border-color: rgba(255, 236, 180, .92);
+
+  animation: haloPulse 1.8s ease-in-out infinite;
+
   box-shadow:
-    0 0 0 2px rgba(255, 230, 165, .22),
-    0 0 22px rgba(255, 223, 145, .60),
-    0 0 52px rgba(230, 164, 63, .38),
-    0 0 84px rgba(185, 102, 31, .20);
-}
+
+    0 0 0 3px rgba(255, 237, 186, .34),
+
+    0 0 30px rgba(255, 232, 160, .92),
+
+    0 0 62px rgba(255, 186, 67, .62),
+
+    0 0 100px rgba(212, 98, 22, .34);
 
 .controls {
   display: flex;
@@ -324,22 +367,36 @@ h1 {
 }
 
 @keyframes haloPulse {
-  0%, 100% {
-    box-shadow:
-      0 0 0 2px rgba(255, 230, 165, .18),
-      0 0 18px rgba(255, 223, 145, .48),
-      0 0 46px rgba(230, 164, 63, .30),
-      0 0 74px rgba(185, 102, 31, .16);
-  }
-  50% {
-    box-shadow:
-      0 0 0 3px rgba(255, 237, 190, .35),
-      0 0 28px rgba(255, 231, 162, .78),
-      0 0 64px rgba(239, 174, 72, .48),
-      0 0 96px rgba(192, 105, 29, .26);
-  }
-}
 
+  0%, 100% {
+
+    box-shadow:
+
+      0 0 0 2px rgba(255, 230, 165, .28),
+
+      0 0 24px rgba(255, 223, 145, .70),
+
+      0 0 56px rgba(230, 164, 63, .44),
+
+      0 0 90px rgba(185, 102, 31, .24);
+
+  }
+
+  50% {
+
+    box-shadow:
+
+      0 0 0 4px rgba(255, 241, 202, .48),
+
+      0 0 36px rgba(255, 237, 182, 1),
+
+      0 0 76px rgba(246, 181, 75, .70),
+
+      0 0 120px rgba(207, 100, 22, .38);
+
+  }
+
+}
 @media (max-width: 560px) {
   .topbar {
     align-items: stretch;
