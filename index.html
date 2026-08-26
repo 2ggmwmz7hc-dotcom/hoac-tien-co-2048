@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171513">
+  <title>2048 Hoắc Tiên Cô</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Cửu Môn · Hoắc Tiên Cô edition</p>
+        <h1>2048 Hoắc Tiên Cô</h1>
+        <p class="subtitle">Ghép những khoảnh khắc của Tiên Cô để mở khóa tile cao nhất.</p>
+      </div>
+
+      <div class="score-wrap" aria-label="Điểm số">
+        <div class="score-card">
+          <span>Điểm</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-card">
+          <span>Kỷ lục</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="game-panel">
+      <div class="board-wrap">
+        <div class="board-bg" aria-hidden="true">
+          <div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div>
+        </div>
+        <div id="tileLayer" class="tile-layer" aria-live="polite"></div>
+      </div>
+
+      <div class="controls">
+        <button id="newGame" type="button">Ván mới</button>
+        <button id="undo" type="button" class="secondary">Đi lại</button>
+      </div>
+
+      <p id="status" class="status">Vuốt trên bàn cờ để chơi. Trên máy tính có thể dùng phím mũi tên.</p>
+    </section>
+
+    <section class="legend">
+      <p><strong>Hiệu ứng cấp cao:</strong> 128 bắt đầu ửng sáng, 256–1024 tăng dần, 2048 có halo đặc biệt.</p>
+    </section>
+  </main>
+
+  <div id="victoryModal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="victoryTitle">
+      <img src="images/victory.jpg" alt="Hoắc Tiên Cô" class="victory-image">
+      <div class="modal-copy">
+        <p class="eyebrow">2048 đã mở khóa</p>
+        <h2 id="victoryTitle">Hoắc Gia Chủ xuất thế 👑</h2>
+        <p>Bà đã ghép tới tile cuối. Có thể tiếp tục chơi để lên cao hơn nữa.</p>
+        <div class="modal-actions">
+          <button id="continueGame" type="button">Chơi tiếp</button>
+          <button id="restartFromWin" type="button" class="secondary">Ván mới</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
